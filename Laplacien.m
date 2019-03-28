@@ -1,4 +1,4 @@
-function [F, dom, PAS] = Laplacien_thomas
+function [F, dom, PAS] = Laplacien
 
 Numero = input('num?ro du fichier :');
 switch Numero
