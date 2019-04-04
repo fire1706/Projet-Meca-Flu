@@ -3,8 +3,8 @@ function [u,v] = vitesse(F, dom, PAS)
     DIMENSIONS = size(dom);
     NB_LIGNES = DIMENSIONS(1);
     NB_COLONNES = DIMENSIONS(2);
-    u = zeros(NB_LIGNES -2, NB_COLONNES - 2);
-    v = zeros(NB_LIGNES -2, NB_COLONNES - 2);
+    u = zeros(NB_LIGNES, NB_COLONNES);
+    v = zeros(NB_LIGNES, NB_COLONNES);
     
     for i=2 : NB_LIGNES-1
         for j=2 : NB_COLONNES-1
