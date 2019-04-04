@@ -1,5 +1,5 @@
-%------------------------------Function getCoeff--------------------------%
-%fonction retournant la vitesse (dérivée de la fonction courant)
+%------------------------------Function deriv--------------------------%
+%fonction retournant la vitesse (dÃ©rivÃ©e de la fonction courant)
 %NB: 'left' peut etre remplacer par 'bas' et 'right' peut etre remplacer
 %par 'haut'
 % convention type de noeud: 0 = hors dom; 1 = calc; 2 =
