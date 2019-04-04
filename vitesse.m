@@ -1,6 +1,6 @@
 function [u,v,x,y] = vitesse
 
-    [F,dom,h] = Laplacien_thomas;
+    [F,dom,h] = Laplacien;
     DIMENSIONS = size(dom);
     NB_LIGNES = DIMENSIONS(1);
     NB_COLONNES = DIMENSIONS(2);
