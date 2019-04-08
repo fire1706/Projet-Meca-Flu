@@ -1,3 +1,13 @@
+%------------------------------Function Laplacien--------------------------%
+% Cette fonction nous permet de resoudre le Laplacien sur l'ensemble du 
+% domaine de la fonction. Il prend en entree les matrices correspondant 
+% au numero des points , a la caracterisation du domaine et au condition
+% limites et nous sort la matrices du laplacien.
+%
+%
+% Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
+%
+%-------------------------------------------------------------------------%
 function [F] = Laplacien(num ,dom, cl)
 
 % Numero = input('num?ro du fichier :');
