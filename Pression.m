@@ -1,3 +1,12 @@
+%------------------------------Function Pression--------------------------%
+% Cette fonction nous permet de calculer la pression en tout point. Elle 
+% prend en entree les matrices de vitesse horizontal et vertical et sort 
+% la matrice des pressions
+%
+%
+% Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
+%
+%-------------------------------------------------------------------------%
 function [P] = Pression(u, v)
 
     rho = 1000;
