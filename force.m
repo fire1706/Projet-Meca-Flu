@@ -1,3 +1,11 @@
+%------------------------------Function force--------------------------%
+% Cette fonction nous permet de calculer la force horizontal(fx) et 
+% vertical(fy) a partir d'une circulation de pression.
+%
+%
+% Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
+%
+%-------------------------------------------------------------------------%
 function [fx, fy] = force(p, x, y)
 
 h = 0.5;
