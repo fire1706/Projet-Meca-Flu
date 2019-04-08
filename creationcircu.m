@@ -1,42 +1,38 @@
-%------------------------------Function creationcircu--------------------------%
-% Cette fonction nous permet juste de sortir un vecteur utiliser dans la fonction
-% de circuculation ( circu ) . C'est un code de facilitee.
-%
-%
-% Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
-%
-%-------------------------------------------------------------------------%
-function [a,b,c,d]= creationcircu(u,v)
+function [a,b,e,c,d]= creationcircu(u,v,p)
 Dim = size(u);
-j = 1;
+j = 2;
 cpt = 1;
-for i=16:38
+for i=2:Dim(1)-1
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
+    e(cpt) = p(i,j);
     c(cpt) = i;
     d(cpt) = j;
     cpt = cpt+1;
 end
 
-for j=91:113
+for j=3:Dim(2)-1
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
+    e(cpt) = p(i,j);
     c(cpt) = i;
     d(cpt) = j;
     cpt = cpt+1;
 end
 
-for i=38:-1:16
+for i=Dim(1)-2:-1:2
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
+    e(cpt) = p(i,j);
     c(cpt) = i;
     d(cpt) = j;
     cpt = cpt+1;
 end
 
-for j=113:-1:91
+for j=Dim(2)-2:-1:2
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
+    e(cpt) = p(i,j);
     c(cpt) = i;
     d(cpt) = j;
     cpt = cpt+1;
