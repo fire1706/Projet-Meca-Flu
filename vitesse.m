@@ -1,3 +1,12 @@
+%------------------------------Function vitesse--------------------------%
+% Cette fonction calcul les matrices de vitesse horizontal et vertical a
+% partir du laplacien , la mtrice de domaine et du pas correspondant au 
+% cas étudier.
+%
+%
+% Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
+%
+%-------------------------------------------------------------------------%
 function [u,v] = vitesse(F, dom, PAS)
 
     DIMENSIONS = size(dom);
