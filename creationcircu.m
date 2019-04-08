@@ -1,3 +1,11 @@
+%------------------------------Function creationcircu--------------------------%
+% Cette fonction nous permet juste de sortir un vecteur utiliser dans la fonction
+% de circuculation ( circu ) . C'est un code de facilitee.
+%
+%
+% Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
+%
+%-------------------------------------------------------------------------%
 function [a,b,c,d]= creationcircu(u,v)
 Dim = size(u);
 j = 1;
