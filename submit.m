@@ -10,12 +10,12 @@ switch which
         cl = dlmread('2-cl.txt', '\t');
         dom = dlmread('2-dom.txt', '\t');
         num = dlmread('2-num.txt', '\t');
-        PAS = 0.5;
+        PAS = 0.001;
     case 3
         cl = dlmread('3-cl.txt', '\t');
         dom = dlmread('3-dom.txt', '\t');
         num = dlmread('3-num.txt', '\t');
-        PAS = 0.001;
+        PAS = 0.01;
     case 4
         cl = dlmread('4-cl.txt', '\t');
         dom = dlmread('4-dom.txt', '\t');
