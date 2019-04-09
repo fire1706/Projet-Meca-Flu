@@ -8,7 +8,7 @@
 % Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
 %
 %-------------------------------------------------------------------------%
-function [u,v] = vitesse(F, dom, PAS)
+function [u,v] = velocity(F, dom, PAS)
 
     DIMENSIONS = size(dom);
     NB_LIGNES = DIMENSIONS(1);
@@ -16,11 +16,14 @@ function [u,v] = vitesse(F, dom, PAS)
     u = zeros(NB_LIGNES, NB_COLONNES);
     v = zeros(NB_LIGNES, NB_COLONNES);
     
-    for i=2 : NB_LIGNES-1
-        for j=2 : NB_COLONNES-1
-            v(i, j) = deriv(F(i-1,j), F(i,j), F(i+1,j), dom(i-1,j), dom(i,j), dom(i+1,j), PAS);
-            u(i, j) = deriv(F(i,j-1), F(i,j), F(i,j+1), dom(i,j-1), dom(i,j), dom(i,j+1), PAS);
+    for i=1 : NB_LIGNES
+        for j=1 : NB_COLONNES
+            if (dom(i,j)==0)
+                j=j+1;
+            else
+                v(i, j) = -deriv(F(i-1,j), F(i,j), F(i+1,j), dom(i-1,j), dom(i,j), dom(i+1,j), PAS);
+                u(i, j) = deriv(F(i,j-1), F(i,j), F(i,j+1), dom(i,j-1), dom(i,j), dom(i,j+1), PAS);
+            end   
         end
     end
-    
 end
