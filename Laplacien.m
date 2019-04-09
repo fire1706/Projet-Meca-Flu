@@ -1,4 +1,4 @@
-%------------------------------Function Laplacien--------------------------%
+%------------------------------Function Laplacien-------------------------%
 % Cette fonction nous permet de resoudre le Laplacien sur l'ensemble du 
 % domaine de la fonction. Il prend en entree les matrices correspondant 
 % au numero des points , a la caracterisation du domaine et au condition
@@ -44,8 +44,8 @@ B = zeros((NB_LIGNES-2) * (NB_COLONNES-2), 1);
 
 line = 0; %ligne de la matrice au fil du remplissage
 
-for i=2:NB_LIGNES
-    for j=2:NB_COLONNES
+for i=2:NB_LIGNES - 1
+    for j=2:NB_COLONNES - 1
         line = line + 1;
         if dom(i, j) == 0   %noeud de bordure
             continue;
