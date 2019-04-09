@@ -90,7 +90,7 @@ function [u,v] = velocity(F, dom, PAS)
             if (dom(i,j)==0)
                 j=j+1;
             else
-                v(i, j) = deriv(F(i-1,j), F(i,j), F(i+1,j), dom(i-1,j), dom(i,j), dom(i+1,j), PAS);
+                v(i, NB_COLONNES + 1 - j) = deriv(F(i-1,j), F(i,j), F(i+1,j), dom(i-1,j), dom(i,j), dom(i+1,j), PAS);
                 u(i, j) = deriv(F(i,j-1), F(i,j), F(i,j+1), dom(i,j-1), dom(i,j), dom(i,j+1), PAS);
             end   
         end
