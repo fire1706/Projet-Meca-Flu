@@ -10,42 +10,16 @@
 %-------------------------------------------------------------------------%
 function [F] = Laplacien(num ,dom, cl)
 
-% Numero = input('num?ro du fichier :');
-% switch Numero
-%     case 1
-%         cl = dlmread('1-cl.txt', '\t');
-%         dom = dlmread('1-dom.txt', '\t');
-%         num = dlmread('1-num.txt', '\t');
-%         PAS = 0.5;
-%     case 2
-%         cl = dlmread('2-cl.txt', '\t');
-%         dom = dlmread('2-dom.txt', '\t');
-%         num = dlmread('2-num.txt', '\t');
-%         PAS = 0.5;
-%     case 3
-%         cl = dlmread('3-cl.txt', '\t');
-%         dom = dlmread('3-dom.txt', '\t');
-%         num = dlmread('3-num.txt', '\t');
-%         PAS = 0.001;
-%     case 4
-%         cl = dlmread('4-cl.txt', '\t');
-%         dom = dlmread('4-dom.txt', '\t');
-%         num = dlmread('4-num.txt', '\t');
-%         PAS = 0.01;
-% end
-
-
-
 DIMENSIONS = size(num);
 NB_LIGNES = DIMENSIONS(1);
 NB_COLONNES = DIMENSIONS(2);
 A = sparse((NB_LIGNES-2) * (NB_COLONNES-2), (NB_LIGNES-2) * (NB_COLONNES-2));
-B = zeros((NB_LIGNES-2) * (NB_COLONNES-2), 1);
+B = sparse((NB_LIGNES-2) * (NB_COLONNES-2), 1);
 
 line = 0; %ligne de la matrice au fil du remplissage
 
-for i=2:NB_LIGNES - 1
-    for j=2:NB_COLONNES - 1
+for i=1:NB_LIGNES
+    for j=1:NB_COLONNES
         line = line + 1;
         if dom(i, j) == 0   %noeud de bordure
             continue;
@@ -66,7 +40,7 @@ for i=2:NB_LIGNES - 1
     end
 end
 
-f = sparse(sparse(A)\sparse(B));
+f = sparse(A\B);
 
 F = zeros(NB_LIGNES,NB_COLONNES);
 for i=1:NB_LIGNES
@@ -76,10 +50,6 @@ for i=1:NB_LIGNES
         end
     end
 end
-% 
-% [X, Y] = meshgrid((0:PAS:(NB_LIGNES-1) * PAS),(0:PAS:(NB_COLONNES-1) * PAS));
-% 
-% figure;
-% contourf(X, Y, F');
-% colormap('jet');
+
+
 end
