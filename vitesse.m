@@ -1,7 +1,8 @@
 %------------------------------Function vitesse--------------------------%
 % Cette fonction calcul les matrices de vitesse horizontal et vertical a
-% partir du laplacien , la mtrice de domaine et du pas correspondant au 
-% cas étudier.
+% partir du laplacien
+% Elle prend en entree la matrice de la fonction de courant, la matrice de 
+% domaine et le pas correspondant au cas etudier.
 %
 %
 % Auteur : Thomas BASTIN ; Victor Dachet ; Maxime MIGNOLET 
