@@ -1,8 +1,8 @@
 function [a,b,e,c,d]= creationcircu(u,v,p)
 Dim = size(u);
-j = 2;
+j = 91;
 cpt = 1;
-for i=2:Dim(1)-1
+for i=16:38
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
     e(cpt) = p(i,j);
@@ -11,7 +11,7 @@ for i=2:Dim(1)-1
     cpt = cpt+1;
 end
 
-for j=3:Dim(2)-1
+for j=92:113
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
     e(cpt) = p(i,j);
@@ -20,7 +20,7 @@ for j=3:Dim(2)-1
     cpt = cpt+1;
 end
 
-for i=Dim(1)-2:-1:2
+for i=37:-1:16
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
     e(cpt) = p(i,j);
@@ -29,7 +29,7 @@ for i=Dim(1)-2:-1:2
     cpt = cpt+1;
 end
 
-for j=Dim(2)-2:-1:2
+for j=112:-1:91
     a(cpt) = u(i,j);
     b(cpt) = v(i,j);
     e(cpt) = p(i,j);
@@ -39,3 +39,4 @@ for j=Dim(2)-2:-1:2
 end
 
 end
+
